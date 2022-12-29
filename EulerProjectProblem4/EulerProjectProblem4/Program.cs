@@ -11,12 +11,12 @@ namespace EulerProjectProblem4
         static void Main(string[] args)
         {
             int threeDigits1 = 999, threeDigits2 = 999;
-            int bigger = 0;
+            List<int> palindromeNumbers = new List<int>();
             while (true)
             {
                 if (IsPalindrome(threeDigits1 * threeDigits2))
                 {
-                    Console.WriteLine("{0} x {1} = {2} ", threeDigits1, threeDigits2, threeDigits1 * threeDigits2);
+                    palindromeNumbers.Add(threeDigits2 * threeDigits1);
                 }
 
                 threeDigits2--;
@@ -28,6 +28,7 @@ namespace EulerProjectProblem4
                     threeDigits1--;
                 }
             }
+            Console.WriteLine(palindromeNumbers.Max());
 
 
 
